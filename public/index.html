@@ -1,17 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="public/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind+Vue App</title>
-      <link rel="stylesheet" href="public/css/styles.css">
+
+    <title>Social Media Dashboard</title>
+
+    <link rel="stylesheet" href="public/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/29f99118dd.js" crossorigin="anonymous"></script>
+
   </head>
-  <body>
-    <div id="app">
-        <h1 class="text-3xl text-center">VUE-TAILWIND</h1>
-        <hello-world></hello-world>
+  <body class="dark">
+    <div id="app" class="w-full h-full overflow-auto bg-very-pale-blue dark:bg-very-dark-blue-1 font-inter">
+        <div class="w-9/12 m-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between py-12 md:mx-2">
+                <div>
+                    <h2 class="text-black dark:text-white">Social Media Dashboard</h2>
+                    <p class="text-dark-grayish-blue dark:text-desaturated-blue text-sm font-bold">Total Followers: 23,004</p>
+                </div>
+                <div class="block md:hidden border-b border-dark-grayish-blue w-full my-4 opacity-40">
+
+                </div>
+                <div>
+                    <label for="theme-toggle" class="inline-flex relative items-center cursor-pointer w-full justify-between">
+                        <span>Dark Mode</span>
+                        <input type="checkbox" value="" id="theme-toggle" class="sr-only peer" checked>
+                        <div class="relative p-1 w-12 md:w-14 h-6 md:h-7 rounded-full
+                                    bg-light
+                                    after:bg-very-pale-blue
+                                    peer-checked:bg-gradient-to-r
+                                    peer-checked:from-dark-0
+                                    peer-checked:to-dark-1
+                                    peer-checked:after:left-7
+                                    peer-checked:after:bg-dark-desaturated-blue
+                                    after:left-1
+                                    after:absolute
+                                    after:top-1
+                                    after:rounded-full
+                                    after:h-4
+                                    after:w-4
+                                    md:after:h-5
+                                    md:after:w-5
+                                    after:transition-all
+                                    after:duration-300
+                                    after:border-white"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between text-center">
+
+                <!-- Facebook -->
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 py-4 mb-4 md:mb-0 border-t-4 border-facebook rounded-md">
+                    <a class="font-bold py-4 flex items-center justify-center" href="#">
+                        <i class="fa-brands fa-facebook-square text-facebook text-2xl"></i>
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-xs pl-2">@nathanf</span>
+                    </a>
+                    <h1 class="text-black dark:text-white py-2">1987</h1>
+                    <h3 class="text-dark-grayish-blue dark:text-desaturated-blue pb-2 font-extralight tracking-[3px]">FOLLOWERS</h3>
+                    <p class="text-lime-green py-2 font-bold text-xs">
+                        <i class="fa-solid fa-caret-up"></i>
+                        12 Today
+                    </p>
+                </div>
+
+                <!-- Twitter -->
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 py-4 mb-4 md:mb-0 border-t-4 border-twitter rounded-md">
+                    <a class="font-bold py-4 flex items-center justify-center" href="#">
+                        <i class="fa-brands fa-twitter text-twitter text-2xl"></i>
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-xs pl-2">@nathanf</span>
+                    </a>
+                    <h1 class="text-black dark:text-white py-2">1044</h1>
+                    <h3 class="text-dark-grayish-blue text-desaturated-blue pb-2 font-extralight tracking-[3px]">FOLLOWERS</h3>
+                    <p class="text-lime-green py-2 font-bold text-xs">
+                        <i class="fa-solid fa-caret-up"></i>
+                        99 Today
+                    </p>
+                </div>
+
+                <!-- Instagram -->
+                <div class="bg-gradient-to-r from-instagram-0 to-instagram-1 w-full md:mx-2 pt-1 mb-4 md:mb-0 rounded-md">
+                    <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full rounded-md h-full py-4">
+                        <a class="font-bold py-4 flex items-center justify-center" href="#">
+                            <i class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-r from-instagram-0 to-instagram-1 text-2xl"></i>
+                            <span class="text-dark-grayish-blue dark:text-desaturated-blue text-xs pl-2">@realnathanf</span>
+                        </a>
+                        <h1 class="text-black dark:text-white py-2">11k</h1>
+                        <h3 class="text-dark-grayish-blue dark:text-desaturated-blue pb-2 font-extralight tracking-[3px]">FOLLOWERS</h3>
+                        <p class="text-lime-green py-2 font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            1099 Today
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Youtube -->
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 py-4 mb-4 md:mb-0 border-t-4 border-youtube rounded-md">
+                    <a class="font-bold py-4 flex items-center justify-center" href="#">
+                        <i class="fa-brands fa-youtube text-youtube text-2xl"></i>
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-xs pl-2">Nathan F.</span>
+                    </a>
+                    <h1 class="text-black dark:text-white py-2">8239</h1>
+                    <h3 class="text-dark-grayish-blue dark:text-desaturated-blue pb-2 font-extralight tracking-[3px]">SUBSCRIBERS</h3>
+                    <p class="text-bright-red py-2 font-bold text-xs">
+                        <i class="fa-solid fa-caret-down"></i>
+                        144 Today
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-black dark:text-white pt-12 pb-6 mx-2">Overview - Today</h3>
+
+            <div class="flex flex-col md:flex-row justify-between md:pb-4">
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Page Views
+                        </span>
+                        <i class="fa-brands fa-facebook-square text-facebook text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">87</h2>
+                        <p class="text-lime-green font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            3%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Likes
+                        </span>
+                        <i class="fa-brands fa-facebook-square text-facebook text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">52</h2>
+                        <p class="text-bright-red font-bold text-xs">
+                            <i class="fa-solid fa-caret-down"></i>
+                            2%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Likes
+                        </span>
+                        <i class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-r from-instagram-0 to-instagram-1 text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">5462</h2>
+                        <p class="text-lime-green font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            2257%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Profile Views
+                        </span>
+                        <i class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-r from-instagram-0 to-instagram-1 text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">52k</h2>
+                        <p class="text-lime-green font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            1375%
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Retweets
+                        </span>
+                        <i class="fa-brands fa-twitter text-twitter text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">117</h2>
+                        <p class="text-lime-green font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            303%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Likes
+                        </span>
+                        <i class="fa-brands fa-twitter text-twitter text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">507</h2>
+                        <p class="text-lime-green font-bold text-xs">
+                            <i class="fa-solid fa-caret-up"></i>
+                            553%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Likes
+                        </span>
+                        <i class="fa-brands fa-youtube text-youtube text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">107</h2>
+                        <p class="text-bright-red font-bold text-xs">
+                            <i class="fa-solid fa-caret-down"></i>
+                            19%
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-light-grayish-blue dark:bg-dark-desaturated-blue w-full md:mx-2 px-8 py-6 mb-4 md:mb-0 rounded-md">
+                    <div class="flex justify-between items-center">
+                        <span class="text-dark-grayish-blue dark:text-desaturated-blue text-sm">
+                            Total Views
+                        </span>
+                        <i class="fa-brands fa-youtube text-youtube text-2xl"></i>
+                    </div>
+                    <div class="flex justify-between items-baseline pt-4">
+                        <h2 class="text-black dark:text-white">1407</h2>
+                        <p class="text-bright-red font-bold text-xs">
+                            <i class="fa-solid fa-caret-down"></i>
+                            12%
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <div class="w-full fixed h-4/6 bottom-0 bg-white dark:bg-very-dark-blue-0"></div>
     <script src="public/js/site.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#theme-toggle').on('input', function()
+        {
+            var body = $('body')[0];
+            if(body.classList.contains('dark'))
+            {
+                body.classList.remove('dark');
+            }
+            else
+            {
+                body.classList.add('dark');
+            }
+        });
+    </script>
   </body>
 </html>
