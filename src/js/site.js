@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import '../css/styles.css'
 
-import HelloWorld from './components/HelloWorld.vue'
+import Calculator from './components/Calculator.vue'
 
 const app = createApp({})
 
-app.component('hello-world', HelloWorld);
+app.component('calculator', Calculator);
 
 app.mount('#app')
