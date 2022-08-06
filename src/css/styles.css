@@ -8,13 +8,13 @@ html, body, main { @apply w-full h-full font-space-mono;}
 
 h1,h2,h3,h4, p { @apply font-bold; }
 
-h1 { @apply text-5xl }
+h1 { @apply text-4xl md:text-5xl }
 h2 {}
 h3 {}
 h4 {}
 p { @apply text-white }
 
-input { @apply w-full bg-very-light-grayish-cyan h-[45px] text-end pr-4 font-bold text-2xl text-grayish-cyan opacity-75 rounded-lg outline-none; }
+input { @apply w-full bg-very-light-grayish-cyan h-[48px] text-end pr-4 font-bold text-2xl placeholder-grayish-cyan opacity-75 rounded-lg outline-none; }
 
-button { @apply bg-tiber text-white text-2xl rounded-lg h-[45px] }
+button { @apply bg-tiber text-white text-2xl rounded-lg h-[45px] hover:bg-light-cyan }
 
